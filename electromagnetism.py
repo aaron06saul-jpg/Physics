@@ -8,7 +8,7 @@ time_per_tick = 1/ticks_per_second
 class ChargedParticle:
     def __init__(self, charge, mass, velocity, position): # charge and mass are scalars, whereas velocity and position will be lists of 3 numbers
         if not(isinstance(velocity, np.ndarray) and len(velocity) == 3) or not(isinstance(position, np.ndarray) and len(velocity) == 3):
-            print("these values are not in the correct form")
+            print("these velocity and position values are not in the correct form")
             exit()
         self.charge = charge
         self.mass = mass
@@ -74,4 +74,5 @@ for i in range(ticks):
     positions_B.append(particle_B.position.copy())
     
 positions_A = np.array(positions_A)
+
 positions_B = np.array(positions_B)
